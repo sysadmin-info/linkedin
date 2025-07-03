@@ -1,6 +1,11 @@
 # linkedin
 Linkedin manual couner
 
+Watch entire series about this device
+
+https://sysadmin.info.pl/en/series/ulanzi-tc001-smart-pixel-clock/page/2/
+https://sysadmin.info.pl/en/series/ulanzi-tc001-smart-pixel-clock/
+
 1. Go here: https://www.linkedin.com/in/your-username/recent-activity/all/
 2. Check number of followers and note it.
 3. Import the flow into n8n.

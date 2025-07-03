@@ -1,0 +1,85 @@
+[
+  {
+    "id": "tab_manual_followers",
+    "type": "tab",
+    "label": "LinkedIn Manual Followers",
+    "disabled": false
+  },
+  {
+    "id": "inject_hourly",
+    "type": "inject",
+    "z": "tab_manual_followers",
+    "name": "Every hour",
+    "props": [],
+    "repeat": "3600",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 140,
+    "y": 100,
+    "wires": [
+      [
+        "function_set_count"
+      ]
+    ]
+  },
+  {
+    "id": "function_set_count",
+    "type": "function",
+    "z": "tab_manual_followers",
+    "name": "Set the number of followers manually",
+    "func": "// --- manually enter the number of followers ---\nconst count = 213;   // ← here change to current value\n\n// --- Don't change it below ---\nmsg.payload = {\n  text: count.toString(),\n  icon: \"25677\",\n  duration: 10\n};\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 410,
+    "y": 100,
+    "wires": [
+      [
+        "mqtt_out_linkedin"
+      ]
+    ]
+  },
+  {
+    "id": "mqtt_out_linkedin",
+    "type": "mqtt out",
+    "z": "tab_manual_followers",
+    "name": "MQTT ► Ulanzi",
+    "topic": "awtrix_prefix/custom/linkedin",
+    "qos": "",
+    "retain": "",
+    "broker": "mqtt_local",
+    "x": 680,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "mqtt_local",
+    "type": "mqtt-broker",
+    "name": "Your MQTT broker",
+    "broker": "MQTT_IP_ADRES",
+    "port": "1883",
+    "clientid": "",
+    "usetls": false,
+    "protocolVersion": "4",
+    "keepalive": "60",
+    "cleansession": true,
+    "birthTopic": "",
+    "birthQos": "0",
+    "birthRetain": "false",
+    "birthPayload": "",
+    "closeTopic": "",
+    "closeQos": "0",
+    "closeRetain": "false",
+    "closePayload": "",
+    "willTopic": "",
+    "willQos": "0",
+    "willRetain": "false",
+    "willPayload": ""
+  }
+]
+

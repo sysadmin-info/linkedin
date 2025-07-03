@@ -17,3 +17,4 @@ https://sysadmin.info.pl/en/series/ulanzi-tc001-smart-pixel-clock/
 3. Import the flow into n8n or Node-RED.
 4. Double click Extract Follower Count node and provide your number instead 213.
 5. Double click Send to Clock node and provide the correct IP address for your Ulanzi TC001 device.
+6. Please remember to download an icon in Ulanzi's dashboard. I use icon 25677.

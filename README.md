@@ -3,7 +3,13 @@ Linkedin manual couner
 
 Watch entire series about this device
 
+**How to flash and connect via MQTT:**
+
 https://sysadmin.info.pl/en/series/ulanzi-tc001-smart-pixel-clock/page/2/
+
+
+**All the rest that is worth to watch:**
+
 https://sysadmin.info.pl/en/series/ulanzi-tc001-smart-pixel-clock/
 
 1. Go here: https://www.linkedin.com/in/your-username/recent-activity/all/
